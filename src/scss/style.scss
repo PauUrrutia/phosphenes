@@ -1,0 +1,390 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Raleway:wght@600;700;900&display=swap');
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$crema: #F8F3EB;
+$link: #f55058;
+$hover-text: #e2d7c4;
+$light-grey: #e8e8e8;
+$white: #FFFFFF;
+
+@keyframes gradient {
+    0% {
+        opacity: 0%;
+    }
+    50% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
+    }
+}
+
+body {
+    background-color: #f55058;
+    background-image: linear-gradient(167deg, #f55058 0%, #eb7787 74%);
+    background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+
+    p,a,button, ul, ol {
+        font-family: 'Montserrat', sans-serif;
+    }
+}
+
+a {
+    color: $link;
+    font-size: .8rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: .4s ease-in-out;
+
+    &:hover {
+        color: $link;
+        text-decoration: none;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.grey {
+    color: gray;
+}
+
+.menu.white {
+    a {
+        color: $white;
+
+        &:hover, &:focus, &:active {
+            color: $white;
+        }
+    }
+
+    ul {
+        li {
+            &:first-of-type {
+                border-right: 1px solid $white;
+            }
+    
+            &:after {
+                background-color: $white;
+            }
+        }
+    }
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.background-title {
+    background-color: #f83741 ;
+    background-image: linear-gradient(340deg, #f83741 0%, #eb7787 74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 4rem;
+    font-weight: 900;
+    left: 50%;
+    line-height: 5rem;
+    position: fixed;
+    text-align: center;
+    top: 15%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    z-index: 2;
+
+    @include media-breakpoint-up(lg) {
+        font-size: 8.625rem;
+        line-height: 10.13rem;
+        top: 20%;
+    }
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    color: $link;
+}
+
+canvas {
+    height: 100% !important;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100% !important;
+    z-index: 3;
+}
+
+.menu {
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    z-index: 5;
+
+    a {
+        background-color: transparent;
+        border: none;
+        color: $link;
+        font-size: .6rem;
+        font-weight: 600;
+        letter-spacing: 3px;
+        padding: 0;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: .4s ease-in-out;
+
+        &:hover, &:focus, &:active {
+            background-color: transparent;
+            border: none;
+            box-shadow: none;
+            color: $link;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: .8rem;
+        }
+    }
+
+    ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+            display: inline-block;
+            padding: 0 1rem;
+
+            &:first-of-type {
+                border-right: 2px solid $link;
+            }
+
+            &:hover {
+                &:after {
+                    width: 100%;
+                }
+            }
+
+            &:after {
+                background-color: $link;
+                content: "";
+                display: block;
+                height: 2px;
+                transition: width .4s ease-out;
+                width: 0%;
+            }
+        }
+    }
+}
+
+.gradient-container {
+    animation-name: gradient;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    background-color: #f55058;
+    background-image: linear-gradient(340deg, #f55058 0%, #eb7787 74%);
+    height: 100vh;
+}
+
+.contact-button {
+    cursor: pointer;
+    display: block;
+    position: fixed;
+    width: 4rem;
+    height: 4rem;
+    bottom: 4rem;
+    right: 2rem;
+    z-index: 5;
+
+    @include media-breakpoint-up(lg) {
+        width: 6rem;
+        height: 6rem;
+        bottom: 2rem;
+        right: 2rem;
+    }
+
+    &:hover {
+        a {
+            transform: translate3d(0, 0, 0) scale(1.2);
+        }   
+    }
+
+    a {
+        -webkit-box-shadow: 0px 5px 30px 0px rgba(229, 19, 19, .6);
+        -moz-box-shadow:    0px 5px 30px 0px rgba(229, 19, 19, .6);
+        box-shadow:         0px 5px 30px 0px rgba(229, 19, 19, .6);
+        background-color: white;
+        border-radius: 50%;
+        bottom: 4rem;
+        height: 5rem;
+        position: fixed;
+        right: 2rem;
+        transition: background-color 0.5s ease 0.75s, transform 0.45s cubic-bezier(0.17, 0.67, 0.3, 1.33), -webkit-transform 0.45s cubic-bezier(0.17, 0.67, 0.3, 1.33);
+        width: 5rem; 
+
+        @include media-breakpoint-up(lg) {
+            width: 6rem;
+            height: 6rem;
+            bottom: 2rem;
+            right: 2rem;
+        }
+    }
+
+    img {
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        width: 2.5rem;
+    }
+}
+
+.fixed-container {
+    background-color: $white;
+    -webkit-box-shadow: 0px 5px 30px 0px rgba(229, 19, 19, .6);
+    -moz-box-shadow:    0px 5px 30px 0px rgba(229, 19, 19, .6);
+    box-shadow:         0px 5px 30px 0px rgba(229, 19, 19, .6);
+    height: 100vh;
+    left: 50%;
+    overflow-y: scroll;
+    padding: 0;
+    position: absolute;
+    top: 0;
+    transform: translateX(-50%);
+}
+
+.fixed-header {
+    display: block;
+    left: 0;
+    margin-top: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    .text-header {
+        background-color: $white;
+        border-bottom: .063rem solid $light-grey;
+        margin-right: .5rem;
+        padding: .8rem 1rem 0 1rem;
+        
+        @include media-breakpoint-up(lg) {
+            margin-right: 1.2rem;
+            padding: 1rem 5rem .5rem 5rem;
+        }
+    }
+
+    .terms-header {
+        padding: .8rem 1rem 1rem 1rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 1rem 5rem 1.5rem 5rem;
+        }
+    }
+}
+
+.text-container {
+    p, ul, ol {
+        font-size: .875rem;
+        line-height: 1.75rem;
+    }
+
+    ul, ol {
+        padding-left: 1.5rem;
+        li {
+            margin-bottom: .8rem;
+        }
+    }
+
+    a {
+        letter-spacing: 1px;
+        text-transform: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    .text-section {
+        margin-bottom: 2rem;
+
+        @include media-breakpoint-up(md) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .text-body {
+        margin-top: 7rem;
+        padding: 1rem 1rem 3rem 1rem;
+
+        @include media-breakpoint-up(lg) {
+            padding: 3rem 5rem 3rem 5rem;
+        }
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+    h3 {
+        font-size: 1.313rem;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-top: 1.5rem;
+
+        @include media-breakpoint-up(md) {
+            margin-top: 2rem;
+        }
+    }
+}
+
+.text-section-footer {
+    ul {
+        background: rgb(255,255,255);
+        background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5998993347338936) 7%, rgba(255,255,255,1) 49%);
+        display: flex;
+        justify-content: center;
+        margin: 0;
+        padding-bottom: 1rem;
+        padding-top: 3rem;
+        
+        @include media-breakpoint-up(lg) {
+            margin-right: .25rem;
+        }
+    }
+}
+
+//Custom Scrollbar
+@include media-breakpoint-up(lg) {
+    /* total width */
+    .text-container::-webkit-scrollbar {
+        background-color: #fff;
+        width: 16px;
+    }
+
+    /* background of the scrollbar except button or resizer */
+    .text-container::-webkit-scrollbar-track {
+        background-color: #fff;
+    }
+
+    /* scrollbar itself */
+    .text-container::-webkit-scrollbar-thumb {
+        background-color: #babac0;
+        border-radius: 16px;
+        border: 5px solid #fff;
+    }
+
+    /* set button(top and bottom of the scrollbar) */
+    .text-container::-webkit-scrollbar-button {
+        display:none;
+    }
+}
+

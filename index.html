@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Phosphenes</title>
+    <link rel="stylesheet" type="text/css" href="dist/css/style.css" />
+    <link rel="icon" type="image/png" sizes="32x32" href="dist/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="dist/favicon/favicon-16x16.png">
+</head>
+
+<body>
+    <header>
+        <nav class="menu white">
+            <ul>
+                <li>
+                    <a href="privacy.html">Privacy Policy</a>
+                </li>
+                <li>
+                    <a href="terms.html">Terms of Use</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="gradient-container">
+    </div>
+    <canvas id="canvas3d"></canvas>
+    <h1 class="background-title">Magenta Apps</h1>
+    <div class="contact-button">
+        <a href="mailto:hello@magentaapps.com">
+            <img src="dist/img/email-24px.svg">
+        </a>
+    </div>
+
+    <!-- Terms of use Modal -->
+    <div class="modal fade" id="TermsUse" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title d-block" id="exampleModalLabel">Terms of use</h1>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-section">
+                        <h3>Orders and purchases</h3>
+                        <p>If you wish to purchase any product or service made available through the Application ("Purchase"), you may be asked to supply certain information relevant to your Purchase including, without limitation, your credit card number, the expiration date of your credit card, your billing address, and your shipping information.</p>
+                        <p>You represent and warrant that: (i) you have the legal right to use any credit card(s) or other payment method(s) in connection with any Purchase; and that (ii) the information you supply to us is true, correct and complete.</p>
+                        <p>By submitting such information, you grant us the right to provide the information to third parties for purposes of facilitating the completion of Purchases.</p>
+                        <p>We reserve the right to refuse or cancel your order at any time for certain reasons including but not limited to: product or service availability, errors in the description or price of the product or service, error in your order or other reasons.</p>
+                        <p>We reserve the right to refuse or cancel your order if fraud or an unauthorised or illegal transaction is suspected.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Orders and purchases</h3>
+                        <p>Information about the auto-renewable nature of the Premium Subscription:</p>
+                        <ul>
+                            <li>The subscription period is 1 month (with a 3-day trial). Your subscription renews every month.</li>
+                            <li>Payment will be charged to iTunes Account at confirmation of purchase.</li>
+                            <li>Subscription automatically renews unless auto-renew is turned off at least 24-hours before the end of the current period.</li>
+                            <li>Account will be charged for renewal within 24-hours prior to the end of the current period.</li>
+                            <li>You can cancel your subscription via this URL: <a href="https://support.apple.com/en-us/HT202039">https://support.apple.com/en-us/HT202039</a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Availability, Errors and Inaccuracies</h3>
+                        <p>We are constantly updating our offerings of products and services in the Application. The products or services available in our Application may be mispriced, described inaccurately, or unavailable, and we may experience delays in updating information in the Application and in our advertising on other web sites.</p>
+                        <p>We cannot and do not guarantee the accuracy or completeness of any information, including prices, product images, specifications, availability, and services. We reserve the right to change or update information and to correct errors, inaccuracies, or omissions at any time without prior notice.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Intellectual Property</h3>
+                        <p>The Application and its original content, features and functionality are and will remain the exclusive property of Happymob Software Limited and its licensors. The Application is protected by copyright, trademark, and other laws of both the EU and other territories. Our trademarks may not be used in connection with any product or service without the prior written consent of Engagement, Co.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Links To Other Web Sites</h3>
+                        <p>Our Application may contain links to third-party web sites or services that are not owned or controlled by Happymob Software Limited.</p>
+                        <p>Happymob Software Limited has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that Happymob Software Limited shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with use of or reliance on any such content, goods or services available on or through any such web sites or services.</p>
+                        <p>We strongly advise you to read the terms and conditions and privacy policies of any third-party web sites or services that you visit.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Termination</h3>
+                        <p>We may terminate or suspend your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.</p>
+                        <p>Upon termination, your right to use the Application will immediately cease.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Limitation Of Liability</h3>
+                        <p>In no event shall Happymob Software Limited, nor its directors, employees, partners, agents, suppliers, or affiliates, be liable for any indirect, incidental, special, consequential or punitive damages, including without limitation, loss of profits, data, use, goodwill, or other intangible losses, resulting from (i) your access to or use of or inability to access or use the Application; (ii) any conduct or content of any third party on the Application; (iii) any content obtained from the Application; and (iv) unauthorized access, use or alteration of your transmissions or content, whether based on warranty, contract, tort (including negligence) or any other legal theory, whether or not we have been informed of the possibility of such damage, and even if a remedy set forth herein is found to have failed of its essential purpose.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Disclaimer</h3>
+                        <p>Your use of the Application is at your sole risk. The Application is provided on an "AS IS" and "AS AVAILABLE" basis. The Application is provided without warranties of any kind, whether express or implied, including, but not limited to, implied warranties of merchantability, fitness for a particular purpose, non-infringement or course of performance.</p>
+                        <p>Happymob Software Limited and its subsidiaries, affiliates, and its licensors do not warrant that a) the Application will function uninterrupted, securely or be available at any particular time or location; b) any errors or defects will be corrected; c) the Application is free of any harmful components; or d) the results of using the Application will meet your requirements.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Governing Law</h3>
+                        <p>These Terms shall be governed and construed in accordance with the laws of EU, without regard to its conflict of law provisions.</p>
+                        <p>Our failure to enforce any right or provision of these Terms will not be considered a waiver of those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the remaining provisions of these Terms will remain in effect. These Terms constitute the entire agreement between us regarding our Application, and supersede and replace any prior agreements we might have between us regarding the Application.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Changes</h3>
+                        <p>We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30 days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.</p>
+                        <p>By continuing to access or use our Application after those revisions become effective, you agree to be bound by the revised terms. If you do not agree to the new terms, please stop using the Application.</p>
+                    </div>
+                    <div class="modal-section">
+                        <h3>Contact Us</h3>
+                        <p>If you have any questions about these Terms, please contact us.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--JS-->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+        <script>
+            // Global namespace (backwards-compatibility)
+            var SPE = {};
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+        <script src="dist/js/main.js"></script>
+        <script type="module">
+			import { Application } from './dist/js/runtime.js';
+			const canvas = document.getElementById('canvas3d');
+			const app = new Application(canvas);
+			app.load('./scene.spline');		
+        </script>
+</body>
+
+</html>
